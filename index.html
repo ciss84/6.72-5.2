@@ -10,7 +10,7 @@
 </head>
 <body>
   <script>
-  	document.body.style.backgroundImage = "url('assets/img/0.gif')";
+  	document.body.style.backgroundImage = "url('assets/img/0.jpg')";
     document.cookie = "exploit=null";
     document.cookie = "fan=55";
     document.cookie = "levelTemp=55";
@@ -45,13 +45,13 @@
       var alertfirmware = true;
     }
   </script>
-  <script src="common/exploit.js"></script>
-  <script src="jb/jb.js"></script>
+  <script src="assets/js/exploit.js"></script>
+  <script src="assets/js/jb.js"></script>
   <script src="assets/js/functions.js"></script>   
   <script>function print() { }</script> 
   <header id="header">
     <div class="content-title">
-      <center><h2 id="title">Fw 6.72 Host v3.0</h2></center>
+      <center><h2 id="title">Fw 6.72 Host v3.6</h2></center>
       <li><a href="credits.html" id="credits">Mugiwara Credits</a></li> 
       <hr>
     </div>
@@ -62,46 +62,45 @@
         <ul class="submenu" id="submenu0">
           <!--<li><a href="#" id="mirahen" class="submenua" onclick="load_mira(); return false">Mira+HEN</a></li>-->
           <li><a href="#" id="mirausb" class="submenua" onclick="inject_payload('mirausb'); return false">MiraElfLoader Usb</a></li>                  
-          <li><a href="#" id="mirahen" class="submenua" onclick="load_mira(); return false">Mirahen+Todex</a></li>
+          <li><a href="#" id="mirahen" class="submenua" onclick="load_mira(); return false">Mirahen +Todex</a></li>
           <li><a href="#" id="hen213" onclick="inject_payload('hen213'); return false">Hen 2.1.3</a></li>           
           <li><a href="#" id="hen218" onclick="inject_payload('hen218'); return false">Hen 2.1.8</a></li>
           <li><a href="#" id="hen22" onclick="inject_payload('hen22'); return false">Hen 2.2</a></li>                                        
           <li><a href="#" id="hen222" onclick="inject_payload('hen222'); return false">Hen 2.2.2</a></li>                              
         </ul>
       </li>
-      <li id="li3"><a href="#" class="deroulant" id="deroulant2">App</a>
+      <li id="li3"><a href="#" class="deroulant" id="deroulant2">Application</a>
         <ul class="submenu" id="submenu2">
+        <li><a href="http://ps4trainer.com/Trainer/index.html" id="ps4trainer">PS4 Trainer online</a></li>        
           <li><a href="#" id="WebRTE" onclick="inject_payload('WebRTE'); return false">WebRTE Loader</a></li>                          
           <li><a href="#" id="app2usb" onclick="inject_payload('app2usb'); return false">App To Usb</a></li>
           <li><a href="#" id="rifs" onclick="inject_payload('rifs'); return false">Renamer RIF</a></li>         
           <li><a href="#" id="ps4debug" onclick="inject_payload('ps4debug'); return false">Activate Acount Ps4</a></li>
           <li><a href="#" id="linux" onclick="inject_payload('linux'); return false">Linux Loader</a></li>                    
-          <li><a href="#" id="binloader" class="submenua" onclick="load_binloader(); return false">Binloader</a></li>                                       
+          <li><a href="#" id="binloader" class="submenua" onclick="load_binloader(); return false">Binloader</a></li>                                      
         </ul>
       </li>
-      <li id="li4"><a href="#" class="deroulant" id="deroulant3">Dumper</a>
+      <li id="li4"><a href="#" class="deroulant" id="deroulant3">Backup & Restore</a>
         <ul class="submenu" id="submenu3">
-          <li><a href="#" id="dumper" onclick="inject_payload('dumper'); return false">Dumper Games</a></li>          
-          <li><a href="#" id="dumper2" onclick="inject_payload('dumper2'); return false">Dumper Gamesv1.8</a></li>
-          <li><a href="#" id="dumper1" onclick="inject_payload('dumper1'); return false">Dumper Gamesv1.9</a></li>                
-          <li><a href="#" id="dumperkernel" onclick="inject_payload('dumperKernel'); return false">Dumper kernel</a></li>
-          <li><a href="#" id="kernelclock" onclick="inject_payload('kernelClock'); return false">Dumper Clock kernel</a></li>
+          <li><a href="#" id="dumper" onclick="inject_payload('dumper'); return false">Backup Games</a></li>          
+          <li><a href="#" id="dumper2" onclick="inject_payload('dumper2'); return false">Backup Gamesv1.8</a></li>
+          <li><a href="#" id="cache" onclick="inject_payload('cache'); return false">Restore AppCache.db</a></li>
           <li><a href="#" id="backupDTB" onclick="inject_payload('backupDTB'); return false">Backup DTB</a></li>
-          <li><a href="#" id="restoreDTB" onclick="inject_payload('restoreDTB'); return false">Restore DTB</a></li>                                                           
+          <li><a href="#" id="restoreDTB" onclick="inject_payload('restoreDTB'); return false">Restore DTB</a></li>                                                                               
         </ul>
       </li>
-      <li id="li5"><a href="#" class="deroulant" id="deroulant4">Blocker</a>
-        <ul class="submenu" id="submenu4">         
-          <li><a href="#" id="enabler" onclick="inject_payload('desabler'); return false">Activate Update</a></li>
-          <li><a href="#" id="desabler" onclick="inject_payload('enabler'); return false">Désactivate Update</a></li>        
+      <li id="li5"><a href="#" class="deroulant" id="deroulant4">Dumper</a>
+        <ul class="submenu" id="submenu4">
+          <li><a href="#" id="dumperkernel" onclick="inject_payload('dumperKernel'); return false">kernel Dumper</a></li>
+          <li><a href="#" id="kernelclock" onclick="inject_payload('kernelClock'); return false">Clock kernel Dumper</a></li>               
         </ul>
-        <li id="li5"><a href="#" class="deroulant" id="deroulant5">WebBrowser & FTP</a>
+        <li id="li5"><a href="#" class="deroulant" id="deroulant5">WebBrowser & Ftp</a>
         <ul class="submenu" id="submenu5">
-        <li><a href="http://ps4trainer.com/Trainer/index.html" id="ps4trainer">PS4 Trainer</a></li>        
-        <li><a href="#" id="ftp" onclick="inject_payload('ftp'); return false">FTP VTX</a></li>         
+        <li><a href="#" id="ftp" onclick="inject_payload('ftp'); return false">Ftp Vtx</a></li>
+        <li><a href="#" id="enabler" onclick="inject_payload('desabler'); return false">Activate Update</a></li>
+        <li><a href="#" id="desabler" onclick="inject_payload('enabler'); return false">Désactivate Update</a></li>                          
         <li><a href="#" id="history" onclick="inject_payload('history'); return false">Activate History</a></li>
-        <li><a href="#" id="browser" onclick="inject_payload('browser'); return false">Activate WebBrowser</a></li>
-        <li><a href="#" id="cache" onclick="inject_payload('cache'); return false">Swap Cache to user Guide</a></li>                                   
+        <li><a href="#" id="browser" onclick="inject_payload('browser'); return false">Activate WebBrowser</a></li>                                  
         </ul>  
       </li>      
     </ul>

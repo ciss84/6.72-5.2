@@ -1,20 +1,20 @@
 CACHE MANIFEST 
-credits.html
 index.html
+credits.html
 assets\css\anim.css
 assets\css\cache.css
 assets\css\custom.css
 assets\css\default.css
 assets\css\icons.css
 assets\css\style.css
-assets\img\0.gif
+assets\img\0.jpg
 assets\js\functions.js
 assets\js\lodash.min.js
 assets\js\style.js
 assets\js\vue.js
 assets\js\zepto.min.js
-common\exploit.js
-jb\jb.js
+assets\js\exploit.js
+assets\js\jb.js
 PAYLOADS\app2usb.js
 PAYLOADS\backupDTB.js
 PAYLOADS\browser.js
