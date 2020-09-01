@@ -1,20 +1,20 @@
 CACHE MANIFEST 
-style.css
-style.js
-vue.js
-zepto.min.js
 0.jpg
 anim.css
 cache.css
 credits.html
 custom.css
 default.css
+exploit.js
 functions.js
 icons.css
 index.html
-lodash.min.js
 jb.js
-exploit.js
+lodash.min.js
+style.css
+style.js
+vue.js
+zepto.min.js
 PAYLOADS\app2usb.js
 PAYLOADS\backupDTB.js
 PAYLOADS\browser.js
@@ -27,9 +27,11 @@ PAYLOADS\dumperKernel.js
 PAYLOADS\enabler.js
 PAYLOADS\fancontrol.js
 PAYLOADS\ftp.js
+PAYLOADS\GTAVMenu100.js
 PAYLOADS\hen213.js
 PAYLOADS\hen218.js
 PAYLOADS\hen22.js
+PAYLOADS\hen222.js
 PAYLOADS\history.js
 PAYLOADS\kernelClock.js
 PAYLOADS\linux.js
@@ -38,7 +40,6 @@ PAYLOADS\ps4debug.js
 PAYLOADS\restoreDTB.js
 PAYLOADS\rifs.js
 PAYLOADS\WebRTE.js
-PAYLOADS\hen222.js
 PAYLOADS\binloader\c-code.js
 PAYLOADS\mirahen\c-code.js
 PAYLOADS\mirahen\mugiwaramirahen.js
