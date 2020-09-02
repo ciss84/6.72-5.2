@@ -2,10 +2,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Host By @68logic Mod By Mugiwara</title>
-  <link rel="stylesheet" href="anim.css">
-  <link rel="stylesheet" href="icons.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="custom.css"> 
   <link rel="stylesheet" href="default.css">
 </head>
 <body>
@@ -137,9 +134,6 @@
     </ul>
   </div>
 </div>
-<script src="vue.js"></script>
-<script src="lodash.min.js"></script>
-<script src="zepto.min.js"></script>
 <video id="trophy" width="0" height="0">
 <source src="trophy.mp4" type="video/mp4" preload>
 </video> 
@@ -185,8 +179,6 @@ function Populate() {
 		truefw = localStorage.getItem("truefirm");
 	}
 	var txt = "";
-	txt += "USER NAME : "+"<input tabIndex='-1' type='input' id='user' value='Mugiwara' onmousemove='savename()'>"+"<br>";
-	txt += "PS4 FTP IP : "+"<input tabIndex='-1' type='myip' id='myip' value='0.0.0.0:1337' onmousemove='saveip()'>"+"<br><br>";
 	if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Hen Enabled : " + "<span style='color:lime'> true </span>" + "<br>";} else {txt += "Hen Enabled : " + "<span style='color:red'> false </span>" + "<br>";}
   if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Spoof 8.00 Enabled: " + "<span style='color:lime'> true </span>" + "<br>";} else {txt += "Spoof 8.00 Enabled : " + "<span style='color:red'> false </span>" + "<br>";}
 	if (truefw === "spoofed") { txt += "True Firmware : " + "<span style='color:red'>" + truefw + "</span>" + "<br>";} else { txt += "True Firmware : " + "<span style='color:lime'>" + truefw + "</span>" + "<br>";}
@@ -288,7 +280,7 @@ function HideLoaderBox(){SS.Loaded='1';setTimeout(function(){var x=document.quer
   if(LS.AutoHEN!='on'){LS.AutoHEN="off";AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");}if(LS.AutoHEN=='on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON");}
   function RunAutoHen(){SS.InfoBox=1;SS.ThisIsAutoHen = '1';var x = document.querySelectorAll(".box");var i;for(i = 0; i < x.length; i++){x[i].style.opacity="0";}InfoBox.style.display='block'; Title.style.display='none';
   IBT(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));IBV(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Ver'));IBD(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Desc'));
-  Loader.innerHTML='<object type="text/html" data="files/exploit.html" style="width:265px; height:56px;"></object>';}if (UA=="6.72"||UA=="7.02"){HasHenRun="no";}if (UA != "6.72" && UA != "7.02" && LS.AutoHEN == 'on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON - Hen Has Loaded");}
+  Loader.innerHTML='<object type="text/html" data="files/exploit.html" style="width:265px; height:56px;"></object>';}if (UA=="6.72"||UA=="8.00"){HasHenRun="no";}if (UA != "6.72" && UA != "8.00" && LS.AutoHEN == 'on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON - Hen Has Loaded");}
   function LoadAutoHen(){if(LS.IsItCached=="yes"&&HasHenRun=="no"&&LS.AutoHEN=="on"){RunAutoHen();}}window.onload = LoadAutoHen
   window.onkeyup=checkKeyUp;function checkKeyUp(e){e=e||window.event;if(e.keyCode=='117'&&SS.Loaded==null){HideInfo();}
   else if(e.keyCode=='118'&&LS.AutoHEN=="on"&&SS.ThisIsCredits!=1){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");LS.AutoHEN="off";}
