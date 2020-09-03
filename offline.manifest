@@ -18,7 +18,6 @@ PAYLOADS\dumper1.js
 PAYLOADS\dumper2.js
 PAYLOADS\dumperKernel.js
 PAYLOADS\enabler.js
-PAYLOADS\fancontrol.js
 PAYLOADS\ftp.js
 PAYLOADS\hen213.js
 PAYLOADS\history.js
@@ -29,9 +28,10 @@ PAYLOADS\ps4debug.js
 PAYLOADS\restoreDTB.js
 PAYLOADS\rifs.js
 PAYLOADS\WebRTE.js
-PAYLOADS\GTAVMenu100.js
 PAYLOADS\hen223.js
 PAYLOADS\hen224.js
+PAYLOADS\GTAVMenu100.js
+PAYLOADS\fancontrol.js
 PAYLOADS\binloader\c-code.js
 PAYLOADS\mirahen\c-code.js
 PAYLOADS\mirahen\mugiwaramirahen.js
