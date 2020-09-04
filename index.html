@@ -1,41 +1,32 @@
 <html manifest="offline.manifest"><head><meta charset="utf-8" /><title>Host By @68logic Mod By Mugiwara</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="default.css"></head><body>
-<script>
-  	document.body.style.backgroundImage = "url('0.jpg')";
-    document.cookie = "exploit=null";
-    document.cookie = "fan=55";
-    document.cookie = "levelTemp=55";
-    var ua = navigator.userAgent;
-    var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
-    if (fwVersion === "0; Win64; x64" || fwVersion === "6.72" || fwVersion === "7.51"|| fwVersion === "8.00") {
-      var i = 0;
-      var msg = "Toutes nos félicitations! Nous avons détecté que votre PlayStation 4 fonctionne sous FW " + fwVersion + ", Compatiblel With PS4HostCS";
-      window.applicationCache.ondownloading = function () {
-        document.getElementById("alertfw").innerHTML = '<div class="green">' + msg + "</div>";
-      };
-      window.applicationCache.onprogress = function (a) {
-        document.getElementById("cache-overlay").style.display = "block";
-        document.getElementById("progress").innerHTML = '<div align="center" id="myBar"></div>';
-
-        i = Math.round(100 * (a.loaded / a.total));
-        document.getElementById("myBar").style.width = i + "%";
-        if (i == 0) { document.getElementById("myBar").innerHTML = ""; } else { document.getElementById("myBar").innerHTML = i + "%"; }
-      };
-      window.applicationCache.oncached = function () {
-        document.getElementById("cache-overlay").style.display = "none";
-        document.getElementById("alertfw").innerHTML = "";
-        document.getElementById("message").innerHTML = '<div align="center" style="color:green">cache Succes</div>';
-        setTimeout(function () {
-          document.getElementById("message").innerHTML = '<div align="center" style="color:white">Close WebBrowser, cut l\'Internet, and Open WebBrowser</div>';
-          setTimeout(function () {
-            document.getElementById("message").innerHTML = "";
-          }, 6000);
-        }, 2000);
-      };
-    } else {
-      var alertfirmware = Active;
-    }
+<script>document.body.style.backgroundImage = "url('0.jpg')";document.cookie = "exploit=null";document.cookie = "fan=55";document.cookie = "levelTemp=55";
+var ua = navigator.userAgent;
+var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
+if (fwVersion === "0; Win64; x64" || fwVersion === "6.72" || fwVersion === "7.51"|| fwVersion === "8.00") {
+var i = 0;
+var msg = "Toutes nos félicitations! Nous avons détecté que votre PlayStation 4 fonctionne sous FW " + fwVersion + ", Compatiblel With PS4HostCS";
+window.applicationCache.ondownloading = function () {
+document.getElementById("alertfw").innerHTML = '<div class="green">' + msg + "</div>";};
+window.applicationCache.onprogress = function (a) {
+document.getElementById("cache-overlay").style.display = "block";
+document.getElementById("progress").innerHTML = '<div align="center" id="myBar"></div>';
+i = Math.round(100 * (a.loaded / a.total));
+document.getElementById("myBar").style.width = i + "%";
+if (i == 0) { document.getElementById("myBar").innerHTML = ""; } else { document.getElementById("myBar").innerHTML = i + "%"; }};
+window.applicationCache.oncached = function () {
+document.getElementById("cache-overlay").style.display = "none";
+document.getElementById("alertfw").innerHTML = "";
+document.getElementById("message").innerHTML = '<div align="center" style="color:green">cache Succes</div>';
+setTimeout(function () {
+document.getElementById("message").innerHTML = '<div align="center" style="color:white">Close WebBrowser, cut l\'Internet, and Open WebBrowser</div>';
+setTimeout(function () {
+document.getElementById("message").innerHTML = "";
+}, 6000);
+}, 2000);};
+} else {
+var alertfirmware = Active;}
 </script>
-<script src="exploit.js"></script><script src="jb.js"></script><script src="functions.js"></script><script>function print(){}</script> 
+<script src="exploit.js"></script><script src="functions.js"></script><script>function print(){}</script> 
 <header id="header">
 <div class="content-title">
 <center><h2 id="title">Fw 6.72 Host v4.3 By MugiWara</h2></center>
@@ -99,140 +90,117 @@
 <div class="material-icons">{{item.icon}}</div>
 <div class="titles">{{item.title}}{{column.txt1}}<div :id="item.button1"></div>{{column.txt2}}<div :id="item.button2"></div>{{column.txt3}}</div>
 </div></a></li></ul></li></ul></div></div>
-<video id="trophy" width="0" height="0">
-<source src="trophy.mp4" type="video/mp4" preload>
-</video> 
 <div align="center" id="myBar"></div></div></div><footer><div id="fanprogress" class="fanprogress"></div><div id="alertfw"></div><div id="cs-loader" class="cs-loader"><div class="cs-loader-inner"> <label></label><label></label><label></label><label></label><label></label><label></label></div></div></footer>   
 <script>
 var xpver = "";
 var appCache = window.applicationCache;
 switch (appCache.status) {
-  case appCache.UNCACHED:
-
-    cachedxp = "false";
-    break;
-  default:
-	cachedxp = "Active";
-    break;
+case appCache.UNCACHED:
+cachedxp = "false";
+break;
+default:
+cachedxp = "Active";
+break;
 }
 function Populate() {
-	payloadcount = ((document.getElementById('xmb-contain').getElementsByTagName('li').length)- 2);
-	if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")) > "6.72" ) {
-		Activefw = localStorage.getItem("Activefirm");
-	if (Activefw == null) {
-		Activefw = "spoofed";
-	}
-	} else {
-		localStorage.setItem("Activefirm", Number(navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple"))));
-		Activefw = localStorage.getItem("Activefirm");
-	}
-	var txt = "";
-	if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Hen Enabled : " + "<span style='color:lime'> Active</span>" + "<br>";} else {txt += "Hen Enabled : " + "<span style='color:red'> false</span>" + "<br>";}
-  if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Spoof 8.00 Enabled: " + "<span style='color:lime'> Active</span>" + "<br>";} else {txt += "Spoof 8.00 Enabled : " + "<span style='color:red'> false</span>" + "<br>";}
-	if (Activefw === "spoofed") { txt += "Active Firmware : " + "<span style='color:red'>" + Activefw + "</span>" + "<br>";} else { txt += "Active Firmware : " + "<span style='color:lime'>" + Activefw + "</span>" + "<br>";}
-	if (navigator.onLine == false) { txt += "Lan/WiFi Enabled : " + "<span style='color:red'> false</span>" + "<br>";} else { txt += "Lan/WiFi Enabled : " + "<span style='color:lime'> Active</span>" + "<br>";}
-	if (navigator.cookieEnabled === false) { txt += "Cookie Tracking : " + "<span style='color:red'> false</span>" + "<br>";} else { txt += "Cookie Tracking : " + "<span style='color:lime'> Active</span>" + "<br>";}
-	if (cachedxp === "false") { txt += "Host Cached : " + "<span style='color:red'>" + cachedxp + "</span>" + "<br><br>";} else { txt += "Host Cached : " + "<span style='color:lime'>" + cachedxp + "</span>" + "<br><br>";}
-  document.title = xpver;
-	document.getElementById("xmb").getElementsByClassName("material-icons")[0].click();
-	document.getElementById('infoz').innerHTML = txt;
-	document.getElementById("xmb").getElementsByClassName("material-icons")[0].style.color = "firebrick";
-	document.getElementById("xmb").getElementsByClassName("material-icons")[payloadcount].style.color = "gold";
-	document.getElementById("xmb").getElementsByClassName("material-icons")[payloadcount-9].style.color = "lime";
-  document.getElementById("user").value = localStorage.getItem("username");
-  document.getElementById("myip").value = localStorage.getItem("userip");		
-	var fw = document.getElementById('ident');
-	fw.innerHTML = ("Firmware " + navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")) + " detected") ;
-	if (fw.innerHTML.includes("8.00")) {
-	fw.innerHTML = ("Spoof detected");
-	fw.style.color = "yellow";
-	fw.onclick = function(){pop();
-	document.getElementById('Ttitle').innerHTML='NOTIFICATION:';
-	document.getElementById('Tsubtitle').innerHTML='OFW VERSION SPOOFED';};			
-	} else if (fw.innerHTML.includes("Mozilla")) {
-	fw.innerHTML = ("No PS4 detected"); 
-	fw.style.color = "red";
-	fw.onclick = function(){pop();
-	document.getElementById('Ttitle').innerHTML='NOTIFICATION:';
-	document.getElementById('Tsubtitle').innerHTML='NO PS4 DETECTED';};
-	} else if (fw.innerHTML.includes("Mac OS")) {
-	fw.innerHTML = ("No PS4 detected"); 
-	fw.style.color = "red";
-	fw.onclick = function(){pop();
-	document.getElementById('Ttitle').innerHTML='NOTIFICATION:';
-	document.getElementById('Tsubtitle').innerHTML='NO PS4 DETECTED';};
-	}
-	if (localStorage.getItem("ipanel") === null) {
-	document.getElementById("infoz").style.display = "block";
-	} else if (localStorage.getItem("ipanel") === "on" ) {
-	document.getElementById("infoz").style.display = "block";
-	} else {
-	hideMe();
-	}	
-	if (localStorage.getItem("Debug") === "on") {
-	document.getElementsByTagName("UL")[0].getElementsByTagName("LI")[payloadcount].style.display = "block";
-	myNum = 15;
-	} else {
-	document.getElementsByTagName("UL")[0].getElementsByTagName("LI")[payloadcount].style.display = "none";
-	myNum = 14;
-	}
-	if (cachedxp === "Active") {
-	} else {
-	xmbVue.handleKey('x', 12); //move to cache column (12)	
-	window.applicationCache.addEventListener("progress", DLProgress, false);
-	window.open("payloads/xmbcache.html", "content");
-	}
-	window.applicationCache.onupdateready = function (e){window.location.reload();
-	};
-	window.applicationCache.onerror = function (e) {document.getElementById('cacheUPDtxt').innerHTML = "ERROR UPDATING CACHE!!";
-	};
-	document.getElementById('clock').innerHTML = new Date();
-	document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML.slice(0,21);
+payloadcount = ((document.getElementById('xmb-contain').getElementsByTagName('li').length)- 2);
+if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")) > "6.72" ) {
+Activefw = localStorage.getItem("Activefirm");
+if (Activefw == null) {
+Activefw = "spoofed";
+}
+} else {
+localStorage.setItem("Activefirm", Number(navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple"))));
+Activefw = localStorage.getItem("Activefirm");
+}
+var txt = "";
+if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Hen Enabled : " + "<span style='color:lime'> Active</span>" + "<br>";} else {txt += "Hen Enabled : " + "<span style='color:red'> false</span>" + "<br>";}
+if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Spoof 8.00 Enabled: " + "<span style='color:lime'> Active</span>" + "<br>";} else {txt += "Spoof 8.00 Enabled : " + "<span style='color:red'> false</span>" + "<br>";}
+if (Activefw === "spoofed") { txt += "Active Firmware : " + "<span style='color:red'>" + Activefw + "</span>" + "<br>";} else { txt += "Active Firmware : " + "<span style='color:lime'>" + Activefw + "</span>" + "<br>";}
+if (navigator.onLine == false) { txt += "Lan/WiFi Enabled : " + "<span style='color:red'> false</span>" + "<br>";} else { txt += "Lan/WiFi Enabled : " + "<span style='color:lime'> Active</span>" + "<br>";}
+if (navigator.cookieEnabled === false) { txt += "Cookie Tracking : " + "<span style='color:red'> false</span>" + "<br>";} else { txt += "Cookie Tracking : " + "<span style='color:lime'> Active</span>" + "<br>";}
+if (cachedxp === "false") { txt += "Host Cached : " + "<span style='color:red'>" + cachedxp + "</span>" + "<br><br>";} else { txt += "Host Cached : " + "<span style='color:lime'>" + cachedxp + "</span>" + "<br><br>";}
+document.title = xpver;
+document.getElementById("xmb").getElementsByClassName("material-icons")[0].click();
+document.getElementById('infoz').innerHTML = txt;
+document.getElementById("xmb").getElementsByClassName("material-icons")[0].style.color = "firebrick";
+document.getElementById("xmb").getElementsByClassName("material-icons")[payloadcount].style.color = "gold";
+document.getElementById("xmb").getElementsByClassName("material-icons")[payloadcount-9].style.color = "lime";	
+var fw = document.getElementById('ident');
+fw.innerHTML = ("Firmware " + navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")) + " detected") ;
+if (fw.innerHTML.includes("8.00")) {
+fw.innerHTML = ("Spoof detected");
+fw.style.color = "yellow";
+fw.onclick = function(){pop();
+document.getElementById('Ttitle').innerHTML='NOTIFICATION:';
+document.getElementById('Tsubtitle').innerHTML='OFW VERSION SPOOFED';};			
+} else if (fw.innerHTML.includes("Mozilla")) {
+fw.innerHTML = ("No PS4 detected"); 
+fw.style.color = "red";
+fw.onclick = function(){pop();
+document.getElementById('Ttitle').innerHTML='NOTIFICATION:';
+document.getElementById('Tsubtitle').innerHTML='NO PS4 DETECTED';};
+} else if (fw.innerHTML.includes("Mac OS")) {
+fw.innerHTML = ("No PS4 detected"); 
+fw.style.color = "red";
+fw.onclick = function(){pop();
+document.getElementById('Ttitle').innerHTML='NOTIFICATION:';
+document.getElementById('Tsubtitle').innerHTML='NO PS4 DETECTED';};
+}
+if (localStorage.getItem("ipanel") === null) {
+document.getElementById("infoz").style.display = "block";
+} else if (localStorage.getItem("ipanel") === "on" ) {
+document.getElementById("infoz").style.display = "block";
+} else {
+hideMe();
+}	
+if (localStorage.getItem("Debug") === "on") {
+document.getElementsByTagName("UL")[0].getElementsByTagName("LI")[payloadcount].style.display = "block";
+myNum = 15;
+} else {
+document.getElementsByTagName("UL")[0].getElementsByTagName("LI")[payloadcount].style.display = "none";
+myNum = 14;
+}
+if (cachedxp === "Active") {
+} else {
+xmbVue.handleKey('x', 12); //move to cache column (12)	
+}
+window.applicationCache.onupdateready = function (e){window.location.reload();
+};
+window.applicationCache.onerror = function (e) {document.getElementById('cacheUPDtxt').innerHTML = "ERROR UPDATING CACHE!!";
+};
+document.getElementById('clock').innerHTML = new Date();
+document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML.slice(0,21);
 }		
 var i = setInterval(function() {
-	document.getElementById('clock').innerHTML = new Date();
-	document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML.slice(0,21);
+document.getElementById('clock').innerHTML = new Date();
+document.getElementById('clock').innerHTML = document.getElementById('clock').innerHTML.slice(0,21);
 }, 60 * 1000);
-function savename() {
-	var sUser = document.getElementById("user").value;
-	localStorage.setItem("username", sUser);
-	document.getElementById("user").blur();
-}
-function saveip() {
-	var sIp = document.getElementById("myip").value;
-	localStorage.setItem("userip", sIp);
-	document.getElementById("myip").blur();
-}
 function hideMe() {
-  var y = document.getElementById("infoz");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-	localStorage.setItem("ipanel", "on");
-	document.getElementById("hide").innerHTML = "&nbsp;&nbsp;&nbsp;HIDE INFO";
-	document.getElementById("show").innerHTML = "";
-	document.getElementById("hide").style.fontSize = "15px";
-	} else {
-	localStorage.setItem("ipanel", "off");
-  	document.getElementById("hide").innerHTML = xpver;
-	document.getElementById("hide").style.fontSize = "27px";
-	document.getElementById("show").innerHTML = "&nbsp;&nbsp;&nbsp;SHOW INFO";
-    y.style.display = "none";
-  }
+var y = document.getElementById("infoz");
+if (y.style.display === "none") { 
+y.style.display = "block";
+localStorage.setItem("ipanel", "on");
+document.getElementById("hide").innerHTML = "&nbsp;&nbsp;&nbsp;HIDE INFO";
+document.getElementById("show").innerHTML = "";
+document.getElementById("hide").style.fontSize = "15px";
+} else {
+localStorage.setItem("ipanel", "off");
+document.getElementById("hide").innerHTML = xpver;
+document.getElementById("hide").style.fontSize = "27px";
+document.getElementById("show").innerHTML = "&nbsp;&nbsp;&nbsp;SHOW INFO";
+y.style.display = "none";
 }
-function pop() {
-	document.getElementById("trophy").play();
-	Tpopup.classList.remove('animation');
-	void Tpopup.offsetWidth;Tpopup.classList.add('animation');
 }
 function HideLoaderBox(){SS.Loaded='1';setTimeout(function(){var x=document.querySelectorAll(".SelectedItem");var i;for(i=0;i<x.length;i++){x[i].className="InfoIcon Icon";}},1500);}LS.CurrentTemp=RC('CurrentTemp');LS.KernEpochDiff=RC('KernEpochDiff');
-  if(LS.AutoHEN!='on'){LS.AutoHEN="off";AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");}if(LS.AutoHEN=='on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON");}
-  function RunAutoHen(){SS.InfoBox=1;SS.ThisIsAutoHen = '1';var x = document.querySelectorAll(".box");var i;for(i = 0; i< x.length; i++){x[i].style.opacity="0";}InfoBox.style.display='block'; Title.style.display='none';
-  IBT(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));IBV(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Ver'));IBD(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Desc'));
-  Loader.innerHTML='<object type="text/html" data="files/exploit.html" style="width:265px; height:56px;"></object>';}if (UA=="6.72"||UA=="8.00"){HasHenRun="no";}if (UA != "6.72" && UA != "8.00" && LS.AutoHEN == 'on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON - Hen Has Loaded");}
-  function LoadAutoHen(){if(LS.IsItCached=="yes"&&HasHenRun=="no"&&LS.AutoHEN=="on"){RunAutoHen();}}window.onload = LoadAutoHen
-  window.onkeyup=checkKeyUp;function checkKeyUp(e){e=e||window.event;if(e.keyCode=='117'&&SS.Loaded==null){HideInfo();}
-  else if(e.keyCode=='118'&&LS.AutoHEN=="on"&&SS.ThisIsCredits!=1){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");LS.AutoHEN="off";}
-  else if(e.keyCode=='118'&&LS.AutoHEN=="off"&&SS.ThisIsCredits!=1){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON");LS.AutoHEN="on";
-  }
+if(LS.AutoHEN!='on'){LS.AutoHEN="off";AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");}if(LS.AutoHEN=='on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON");}
+function RunAutoHen(){SS.InfoBox=1;SS.ThisIsAutoHen = '1';var x = document.querySelectorAll(".box");var i;for(i = 0; i< x.length; i++){x[i].style.opacity="0";}InfoBox.style.display='block'; Title.style.display='none';
+IBT(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));IBV(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Ver'));IBD(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Desc'));
+Loader.innerHTML='<object type="text/html" data="files/exploit.html" style="width:265px; height:56px;"></object>';}if (UA=="6.72"||UA=="8.00"){HasHenRun="no";}if (UA != "6.72" && UA != "8.00" && LS.AutoHEN == 'on'){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON - Hen Has Loaded");}
+function LoadAutoHen(){if(LS.IsItCached=="yes"&&HasHenRun=="no"&&LS.AutoHEN=="on"){RunAutoHen();}}window.onload = LoadAutoHen
+window.onkeyup=checkKeyUp;function checkKeyUp(e){e=e||window.event;if(e.keyCode=='117'&&SS.Loaded==null){HideInfo();}
+else if(e.keyCode=='118'&&LS.AutoHEN=="on"&&SS.ThisIsCredits!=1){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = OFF");LS.AutoHEN="off";}
+else if(e.keyCode=='118'&&LS.AutoHEN=="off"&&SS.ThisIsCredits!=1){AutoHenInfo.innerHTML=("<div id=L2BUTTON></div>"+"- AutoHen = ON");LS.AutoHEN="on";
 }
-</script><h3 class="infoz" id="infoz">X-PROJECT LOADING..</h3><h3 class="hide" id="hide" onclick='hideMe()'>&nbsp;&nbsp;&nbsp;HIDE INFO</h3><h1 class="hide" id="show" onclick='hideMe()'></h1></body></html></script><script src="style.js"></script></body></html>
+}
+</script><h3 class="infoz" id="infoz">X-PROJECT LOADING..</h3><h3 class="hide" id="hide" onclick='hideMe()'>&nbsp;&nbsp;&nbsp;HIDE INFO</h3><h1 class="hide" id="show" onclick='hideMe()'></h1></body></html></script><script src="style.js"></script><script src="jb.js"></script></body></html>
