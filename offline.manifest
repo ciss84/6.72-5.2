@@ -7,6 +7,7 @@ style.js
 credits.html
 default.css
 exploit.js
+Nouveau document texte.js
 PAYLOADS\app2usb.js
 PAYLOADS\backupDTB.js
 PAYLOADS\browser.js
@@ -30,5 +31,8 @@ PAYLOADS\ps4debug.js
 PAYLOADS\restoreDTB.js
 PAYLOADS\rifs.js
 PAYLOADS\WebRTE.js
+PAYLOADS\reactPSPLUS.js
+PAYLOADS\test.js
+PAYLOADS\hen226.js
 PAYLOADS\mirahen\c-code.js
 PAYLOADS\mirahen\mugiwaramirahen.js
