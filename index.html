@@ -43,8 +43,8 @@ var alertfirmware = Active;}
 <li><a href="#" id="hen224" onclick="inject_payload('hen224'); return false">TdexHen 2.2.4</a></li>           
 <li><a href="#" id="hen225" onclick="inject_payload('hen225'); return false">TdexHen 2.2.5</a></li>                                        
 <li><a href="#" id="hen226" onclick="inject_payload('hen226'); return false">TdexHen 2.2.6</a></li></ul></li>
-<li id="li3"><a href="#" class="deroulant" id="deroulant2">Application</a>
-<ul class="submenu" id="submenu2">
+<li id="li3"><a href="#" class="deroulant" id="deroulant1">Application</a>
+<ul class="submenu" id="submenu1">
 <li><a href="http://ps4trainer.com/Trainer/index.html" id="ps4trainer">PS4 Trainer online</a></li>        
 <li><a href="#" id="WebRTE" onclick="inject_payload('WebRTE'); return false">WebRTE Loader</a></li>                          
 <li><a href="#" id="app2usb" onclick="inject_payload('app2usb'); return false">App To Usb</a></li>
@@ -52,20 +52,20 @@ var alertfirmware = Active;}
 <li><a href="#" id="ps4debug" onclick="inject_payload('ps4debug'); return false">Activate Acount</a></li>
 <li><a href="#" id="linux" onclick="inject_payload('linux'); return false">Linux Loader</a></li>
 <li><a href="#" id="reactPSPLUS" onclick="inject_payload('reactPSPLUS'); return false">reActivate PSPLUS</a></li></ul></li>
-<li id="li4"><a href="#" class="deroulant" id="deroulant3">Backup & Restore</a>
-<ul class="submenu" id="submenu3">
+<li id="li4"><a href="#" class="deroulant" id="deroulant2">Backup & Restore</a>
+<ul class="submenu" id="submenu2">
 <li><a href="#" id="dumper" onclick="inject_payload('dumper'); return false">Backup Games</a></li>          
 <li><a href="#" id="dumper2" onclick="inject_payload('dumper2'); return false">Backup Gamesv1.8</a></li>
 <li><a href="#" id="cache" onclick="inject_payload('cache'); return false">Restore AppCache.db</a></li>
 <li><a href="#" id="backupDTB" onclick="inject_payload('backupDTB'); return false">Backup DTB</a></li>
 <li><a href="#" id="restoreDTB" onclick="inject_payload('restoreDTB'); return false">Restore DTB</a></li></ul></li>
-<li id="li5"><a href="#" class="deroulant" id="deroulant4">Dumper</a>
-<ul class="submenu" id="submenu4">
+<li id="li5"><a href="#" class="deroulant" id="deroulant3">Dumper</a>
+<ul class="submenu" id="submenu3">
 <li><a href="#" id="dumperkernel" onclick="inject_payload('dumperKernel'); return false">kernel Dumper</a></li>
 <li><a href="#" id="kernelclock" onclick="inject_payload('kernelClock'); return false">Clock kernel Dumper</a></li>
 <li><a href="#" id="test" onclick="inject_payload('test'); return false">test</a></li></ul>
-<li id="li5"><a href="#" class="deroulant" id="deroulant5">WebBrowser & Ftp</a>
-<ul class="submenu" id="submenu5">
+<li id="li5"><a href="#" class="deroulant" id="deroulant4">WebBrowser & Ftp</a>
+<ul class="submenu" id="submenu4">
 <li><a href="#" id="ftp" onclick="inject_payload('ftp'); return false">Ftp Vtx</a></li>
 <li><a href="#" id="enabler" onclick="inject_payload('desabler'); return false">Activate Update</a></li>
 <li><a href="#" id="desabler" onclick="inject_payload('enabler'); return false">Désactivate Update</a></li>                          
@@ -106,19 +106,8 @@ break;
 }
 function Populate() {
 payloadcount = ((document.getElementById('xmb-contain').getElementsByTagName('li').length)- 2);
-if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")) > "6.72" ) {
-Activefw = localStorage.getItem("Activefirm");
-if (Activefw == null) {
-Activefw = "spoofed";
-}
-} else {
-localStorage.setItem("Activefirm", Number(navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple"))));
-Activefw = localStorage.getItem("Activefirm");
-}
 var txt = "";
-if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Hen Enabled : " + "<span style='color:lime'> Active</span>" + "<br>";} else {txt += "Hen Enabled : " + "<span style='color:red'> false</span>" + "<br>";}
-if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Spoof 8.00 Enabled: " + "<span style='color:lime'> Active</span>" + "<br>";} else {txt += "Spoof 8.00 Enabled : " + "<span style='color:red'> false</span>" + "<br>";}
-if (Activefw === "spoofed") { txt += "Active Firmware : " + "<span style='color:red'>" + Activefw + "</span>" + "<br>";} else { txt += "Active Firmware : " + "<span style='color:lime'>" + Activefw + "</span>" + "<br>";}
+if (navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (") + 19, navigator.userAgent.indexOf(") Apple")).includes("8.00")) {txt += "Hen + Spoof 8.00 Enabled: " + "<span style='color:lime'> Active</span>" + "<br>";} else {txt += "Hen + Spoof 8.00 Enabled : " + "<span style='color:red'> false</span>" + "<br>";}
 if (navigator.onLine == false) { txt += "Lan/WiFi Enabled : " + "<span style='color:red'> false</span>" + "<br>";} else { txt += "Lan/WiFi Enabled : " + "<span style='color:lime'> Active</span>" + "<br>";}
 if (navigator.cookieEnabled === false) { txt += "Cookie Tracking : " + "<span style='color:red'> false</span>" + "<br>";} else { txt += "Cookie Tracking : " + "<span style='color:lime'> Active</span>" + "<br>";}
 if (cachedxp === "false") { txt += "Host Cached : " + "<span style='color:red'>" + cachedxp + "</span>" + "<br><br>";} else { txt += "Host Cached : " + "<span style='color:lime'>" + cachedxp + "</span>" + "<br><br>";}
